@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class IfTest {
+    public static void main(String[] args) {
+//        int num = new Scanner(System.in).nextInt();
+//
+//        if (num > 5) {
+//            num += 20;
+//        }
+//
+//        System.out.println(num);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("나이를 입력하세요: ");
+
+        int age = sc.nextInt();
+        boolean hasLicense = true;
+
+        if (age > 19) {
+            System.out.println("성인입니다.");
+
+            if (hasLicense) {
+                System.out.println("운전할 수 있어요.");
+            } else {
+                System.out.println("운전할 수 없어요.");
+            }
+        } else if (age == 0) {
+            System.out.println("올바른 값을 입력하세요.");
+        } else {
+            System.out.println("미성년자입니다.");
+        }
+
+        if (age > 19 && hasLicense) {
+            System.out.println("성인입니다.");
+            System.out.println("운전할 수 있어요.");
+        } else if (age > 19 && !hasLicense) {
+            System.out.println("성인입니다.");
+            System.out.println("운전할 수 없어요.");
+        } else if (age == 0) {
+            System.out.println("올바른 값을 입력하세요.");
+        } else {
+            System.out.println("미성년자입니다.");
+        }
+    }
+}
